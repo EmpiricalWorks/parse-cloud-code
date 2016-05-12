@@ -9,7 +9,7 @@ install:
 
 before_script:
   - env | sort
-  - image="yongjhih/parse-cloud-code:$VERSION"
+  - image="ziggyjew/parse-cloud-code:$VERSION"
 
 script:
   - docker build -t "$image" .
