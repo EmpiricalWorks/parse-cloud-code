@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    include ./includes/head.jade
+
+    body
+        div userList
+            table
+                tr.tableHeader
+                    td.displayName Display Name
+                    td.email Email Address
+                    td.department Department
+                    td.highScore Highest Score
+                each user in users
+                    tr.tableEntries
+                        td.displayName= user.get('displayName')
+                        td.email= user.get('email')
+                        td.department= user.get('department')
+                        td.highScore= user.get('highScore')
+
+        include ./includes/foot.jade

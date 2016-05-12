@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    include ./includes/head.jade
+
+    body
+        ul
+            each val in itDayList
+                li
+                    span= val.country + " "
+                    a(href="/user-list/?surveyId=" + val.surveyId) List Users
+
+
+        include ./includes/foot.jade
